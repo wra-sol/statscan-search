@@ -7,7 +7,6 @@
     padding: 16px 8px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     width: 100%;
     align-items: center;
     position: relative;
@@ -125,4 +124,13 @@ button:not(.navLinks):active {
     width: 100%;
     align-items: center;
     position: relative;;
+}
+.footer{
+    position: fixed;
+    color: #333;
+    padding: 20px;
+    bottom: 0px;
+}
+.footer a{
+    color:var(--color-primary);
 }

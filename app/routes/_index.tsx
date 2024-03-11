@@ -1,5 +1,5 @@
 import type { MetaFunction } from "@remix-run/node";
-import { useFetcher, useLoaderData } from "@remix-run/react";
+import { NavLink, useFetcher, useLoaderData } from "@remix-run/react";
 import { createClient } from "@supabase/supabase-js";
 import { useEffect, useRef, useState } from "react";
 import { MainHeader, UpdatedHeader } from "../components/Headers";
@@ -69,6 +69,9 @@ export default function Index() {
       <div>
         <UpdatedHeader />
         <Dailys stories={daily} />
+      </div>
+      <div className="footer">
+        Built for fun by <NavLink to={"https://nathanielarfin.com"}>Nathaniel Arfin</NavLink>
       </div>
     </div>
   );

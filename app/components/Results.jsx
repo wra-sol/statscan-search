@@ -11,7 +11,6 @@ const SearchResult = ({ doc }) => {
                 navigate: false,
                 encType: "application/json"
             })
-
     }
 
     return (

@@ -79,7 +79,8 @@ button:not(.navLinks):active {
     font-size: large;
     border: none;
     border-radius: 2px;
-    flex: 1;
+    flex: 1 1 auto;
+    max-width: 60vw;
 }
 .input:focus{
     outline: none;
@@ -96,7 +97,7 @@ button:not(.navLinks):active {
 }
 
 .dailyStory {
-    max-width: 60%;
+    max-width: 400px;
     text-decoration: none;
 }
 
@@ -128,9 +129,21 @@ button:not(.navLinks):active {
 .footer{
     position: fixed;
     color: #333;
+    text-align: center;
     padding: 20px;
     bottom: 0px;
+    background-color: #eee;
+    width: 100%;
 }
 .footer a{
     color:var(--color-primary);
+}
+@media only screen and (min-width: 768px) {
+    .dailyStory {
+        max-width: 60%;
+        text-decoration: none;
+    }
+    .input{
+        max-width: 60%;
+    }    
 }

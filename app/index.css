@@ -28,7 +28,7 @@
     color: rgb(206, 176, 177);
 }
 
-button:not(.navLinks) {
+button:not(.navLinks, .dailyStory) {
     text-transform: uppercase;
     padding: 8px 16px;
     box-shadow: 2px 2px 0 3px var(--color-primary);
@@ -41,11 +41,11 @@ button:not(.navLinks) {
     cursor: pointer;
 }
 
-button:not(.navLinks):hover {
+button:not(.navLinks, .dailyStory):hover {
     box-shadow: 2px 2px 0 3px var(--color-primary);
 }
 
-button:not(.navLinks):active {
+button:not(.navLinks, .dailyStory):active {
     box-shadow: 2px 2px 0 3px var(--color-primary);
     color: var(--color-primary);
 }
@@ -98,7 +98,11 @@ button:not(.navLinks):active {
 
 .dailyStory {
     max-width: 400px;
+    background-color: unset;
+    border: none;
+    text-align: left;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .dailyStory .title {

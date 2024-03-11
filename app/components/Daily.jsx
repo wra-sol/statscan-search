@@ -1,13 +1,24 @@
-import { NavLink } from '@remix-run/react'
+import { NavLink, useSubmit } from '@remix-run/react'
 
 const Daily = ({ story }) => {
+    const submit = useSubmit();
+    const sendUpdate = () => {
+        return submit(
+            { productId: story.productId },
+            {
+                action: '/stats',
+                method: 'post',
+                navigate: false,
+                encType: "application/json"
+            })
+    }
     return (
-        <NavLink className="dailyStory">
+        <button className="dailyStory" onClick={(sendUpdate)}>
             <h4 className="m0 title">{story.cubeTitleEn}</h4>
             <p className="m0 date">
                 {story.releaseTime.split("T")[0]}
             </p>
-        </NavLink>
+        </button>
     );
 }
 
